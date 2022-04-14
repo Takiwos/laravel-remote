@@ -3,7 +3,7 @@
     "description": "Excute artisan command in remote server",
     "keywords": [
         "Takiwos",
-        "laravel",
+        "ethiopia",
         "laravel-remote"
     ],
     "homepage": "https://github.com/takiwos/laravel-remote",
@@ -16,15 +16,15 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "illuminate/contracts": "^9.0",
+        "php": "^8.0",
+        "illuminate/contracts": "^8.0|^9.0",
         "spatie/laravel-package-tools": "^1.9.2",
         "spatie/ssh": "^1.7"
     },
     "require-dev": {
         "nunomaduro/collision": "^6.0",
         "nunomaduro/larastan": "^2.0.1",
-        "orchestra/testbench": "^7.0",
+        "orchestra/testbench": "^6.23|^7.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
         "phpstan/extension-installer": "^1.1",
@@ -46,16 +46,11 @@
         }
     },
     "scripts": {
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage"
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": false,
-            "phpstan/extension-installer": true
-        }
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
