@@ -13,13 +13,12 @@ class RemoteServiceProvider extends PackageServiceProvider
         /*
          * This class is a Package Service Provider
          *
-         * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
             ->name('laravel-remote')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-remote_table')
+            // ->hasViews()
+            // ->hasMigration('create_laravel-remote_table')
             ->hasCommand(RemoteCommand::class);
     }
 }
